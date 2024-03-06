@@ -4,18 +4,21 @@ use App\Models\Model;
 
 class UsersModel extends Model
 {
-    protected $id;
-    protected $email;
-    protected $password;
+    protected $id; // Identifiant de l'utilisateur
+    protected $email; // Adresse e-mail de l'utilisateur
+    protected $password; // Mot de passe de l'utilisateur
 
     public function __construct()
     {
+        // Extraire le nom de classe de l'espace de noms et définir le nom de la table
         $class = str_replace(__NAMESPACE__ ."\\", "", __CLASS__);
         $this->table = strtolower(str_replace("Model","",$class));
     }
 
     /**
-     * Get the value of id
+     * Obtient la valeur de l'identifiant
+     * 
+     * @return int|null
      */ 
     public function getId()
     {
@@ -23,9 +26,10 @@ class UsersModel extends Model
     }
 
     /**
-     * Set the value of id
+     * Définit la valeur de l'identifiant
      *
-     * @return  self
+     * @param int $id
+     * @return self
      */ 
     public function setId($id)
     {
@@ -35,7 +39,9 @@ class UsersModel extends Model
     }
 
     /**
-     * Get the value of email
+     * Obtient la valeur de l'adresse e-mail
+     * 
+     * @return string|null
      */ 
     public function getEmail()
     {
@@ -43,9 +49,10 @@ class UsersModel extends Model
     }
 
     /**
-     * Set the value of email
+     * Définit la valeur de l'adresse e-mail
      *
-     * @return  self
+     * @param string $email
+     * @return self
      */ 
     public function setEmail($email)
     {
@@ -55,7 +62,9 @@ class UsersModel extends Model
     }
 
     /**
-     * Get the value of password
+     * Obtient la valeur du mot de passe
+     * 
+     * @return string|null
      */ 
     public function getPassword()
     {
@@ -63,9 +72,10 @@ class UsersModel extends Model
     }
 
     /**
-     * Set the value of password
+     * Définit la valeur du mot de passe
      *
-     * @return  self
+     * @param string $password
+     * @return self
      */ 
     public function setPassword($password)
     {
