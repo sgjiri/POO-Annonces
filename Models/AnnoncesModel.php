@@ -3,7 +3,7 @@ namespace App\Models;
 
 class AnnoncesModel extends Model
 {
-    protected $id; // L'ID de l'annonce.
+    protected $id; // L'ID de l'annonce. 
     protected $titre; // Le titre de l'annonce.
     protected $description; // La description de l'annonce.
     protected $created_at; // La date et l'heure de création de l'annonce.
